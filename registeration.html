@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volunteer Registration - EcoSustain</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/feather-icons"></script>
+  <style>
+    .registration-container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+    
+    .form-control {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    
+    .form-check {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+    }
+    
+    .form-check input {
+      margin-right: 0.5rem;
+      margin-top: 0.25rem;
+    }
+    
+    .area-selection {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    
+    .success-message {
+      display: none;
+      background-color: #d4edda;
+      color: #155724;
+      padding: 1rem;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <!-- Header -->
+    <header class="header">
+      <div class="container navbar">
+        <div class="logo">EcoSustain</div>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="index.html#stats">Statistics</a></li>
+            <li><a href="index.html#cta">Take Action</a></li>
+            <li><a href="index.html#about">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container py-12">
+      <button 
+        onclick="window.location.href='volunteer.html'"
+        class="back-button"
+      >
+        <i data-feather="arrow-left" class="icon-small"></i>
+        Back to Volunteer Opportunities
+      </button>
+      
+      <h1 class="volunteer-title">Volunteer Registration</h1>
+      
+      <div class="registration-container">
+        <div id="success-message" class="success-message">
+          Thank you for registering! We will contact you soon with more information.
+        </div>
+        
+        <form id="registration-form">
+          <div class="form-group">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" class="form-control" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" class="form-control" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" class="form-control">
+          </div>
+          
+          <div class="form-group">
+            <label>Areas of Interest</label>
+            <div class="area-selection">
+              <div class="form-check">
+                <input type="checkbox" id="cleanup" name="interests" value="cleanup">
+                <label for="cleanup">Local Clean-up</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" id="planting" name="interests" value="planting">
+                <label for="planting">Tree Planting</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" id="education" name="interests" value="education">
+                <label for="education">Community Education</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" id="recycling" name="interests" value="recycling">
+                <label for="recycling">Recycling Programs</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" id="tech" name="interests" value="tech">
+                <label for="tech">Tech Development</label>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="availability">Availability</label>
+            <select id="availability" name="availability" class="form-control" required>
+              <option value="">Select your availability</option>
+              <option value="weekdays">Weekdays</option>
+              <option value="weekends">Weekends</option>
+              <option value="both">Both weekdays and weekends</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Additional Information</label>
+            <textarea id="message" name="message" rows="4" class="form-control"></textarea>
+          </div>
+          
+          <div class="form-check">
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I agree to receive communications about volunteer opportunities and understand that my information will be handled according to EcoSustain's privacy policy.</label>
+          </div>
+          
+          <button type="submit" class="btn btn-primary">Submit Registration</button>
+        </form>
+      </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-info">
+            <div class="footer-logo">EcoSustain</div>
+            <p>Dedicated to developing innovative solutions for a sustainable future.</p>
+          </div>
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html#features">Features</a></li>
+              <li><a href="index.html#stats">Statistics</a></li>
+              <li><a href="index.html#cta">Take Action</a></li>
+              <li><a href="index.html#about">About Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="#">Research</a></li>
+              <li><a href="#">Publications</a></li>
+              <li><a href="#">Case Studies</a></li>
+              <li><a href="#">News</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h3>Contact</h3>
+            <ul>
+              <li><a href="mailto:info@ecosustain.org">info@ecosustain.org</a></li>
+              <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+              <li><a href="#">123 Green Street</a></li>
+              <li><a href="#">Eco City, EC 12345</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 EcoSustain. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
