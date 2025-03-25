@@ -444,32 +444,110 @@ ul {
   color: var(--color-primary-dark);
 }
 
-/* Responsive */
+/* Volunteer Page Styles */
+.py-12 {
+  padding-top: calc(var(--spacing-unit) * 12);
+  padding-bottom: calc(var(--spacing-unit) * 12);
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  color: #3B82F6;
+  font-weight: 600;
+  margin-bottom: calc(var(--spacing-unit) * 8);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: calc(var(--spacing-unit) * 1);
+  transition: color var(--transition-speed);
+}
+
+.back-button:hover {
+  color: #1D4ED8;
+}
+
+.icon-small {
+  width: 16px;
+  height: 16px;
+  margin-right: calc(var(--spacing-unit) * 1);
+}
+
+.volunteer-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: calc(var(--spacing-unit) * 12);
+  color: var(--color-foreground);
+}
+
+.volunteer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: calc(var(--spacing-unit) * 8);
+}
+
+.volunteer-card {
+  background-color: white;
+  padding: calc(var(--spacing-unit) * 6);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.volunteer-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: calc(var(--spacing-unit) * 4);
+  color: var(--color-foreground);
+}
+
+.volunteer-card p {
+  margin-bottom: calc(var(--spacing-unit) * 4);
+  color: var(--color-text);
+}
+
+.text-gray {
+  color: var(--color-text-light);
+}
+
+.volunteer-list {
+  list-style-position: inside;
+  margin-top: calc(var(--spacing-unit) * 2);
+}
+
+.volunteer-list li {
+  margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+.volunteer-list.numbered {
+  list-style-type: decimal;
+}
+
+.register-now-btn {
+  display: inline-block;
+  margin-top: calc(var(--spacing-unit) * 4);
+  background-color: var(--color-primary);
+  color: white;
+  padding: calc(var(--spacing-unit) * 2) calc(var(--spacing-unit) * 4);
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color var(--transition-speed);
+}
+
+.register-now-btn:hover {
+  background-color: var(--color-primary-dark);
+}
+
+/* Media Queries for Volunteer Page */
 @media (max-width: 768px) {
-  .hero-title {
-    font-size: 2.5rem;
+  .volunteer-grid {
+    grid-template-columns: 1fr;
   }
   
-  .hero-subtitle {
-    font-size: 1.1rem;
-  }
-  
-  .section-title {
+  .volunteer-title {
     font-size: 2rem;
-  }
-  
-  .cta-title {
-    font-size: 2rem;
-  }
-  
-  .cta-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .feature-card {
-    max-width: 350px;
-    margin: 0 auto;
   }
 }
 
