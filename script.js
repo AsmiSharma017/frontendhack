@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function() {
   // Initialize Feather icons
   feather.replace();
@@ -19,6 +20,22 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+  
+  // Handle hash in URL for volunteer page sections
+  if (window.location.hash) {
+    const targetId = window.location.hash;
+    const targetElement = document.querySelector(targetId);
+    
+    if (targetElement) {
+      // Add a slight delay to ensure page is loaded
+      setTimeout(() => {
+        window.scrollTo({
+          top: targetElement.offsetTop - 70,
+          behavior: 'smooth'
+        });
+      }, 300);
+    }
+  }
   
   // Popover functionality
   const popoverTriggers = document.querySelectorAll('.popover-trigger');
@@ -51,6 +68,14 @@ document.addEventListener('DOMContentLoaded', function() {
       header.style.background = 'rgba(255, 255, 255, 0.95)';
       header.style.boxShadow = 'none';
     }
+  });
+  
+  // Basic form functionality for volunteer registration
+  const registerButtons = document.querySelectorAll('.register-now-btn');
+  registerButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      alert('Thank you for your interest in volunteering! Registration form will be available soon.');
+    });
   });
 });
 
